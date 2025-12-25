@@ -1,0 +1,86 @@
+name: Daily Knowledge Push
+
+on:
+  schedule:
+    # Run at 00:00 UTC (08:00 Beijing Time)
+    - cron: "0 0 * * *"
+  workflow_dispatch: # Allow manual trigger
+    inputs:
+      dry_run:
+        description: "Dry run (no email, no DB update)"
+        required: false
+        default: "false"
+        type: boolean
+
+jobs:
+  daily-knowledge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run daily knowledge workflow
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            python main.py --dry-run
+          else
+            python main.py
+          fi
+
+      - name: Commit and push database changes
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # Add database file if it exists
+          if [ -f "database/knowledge.db" ]; then
+            git add database/knowledge.db
+          fi
+
+          # Add log file
+          if [ -f "daily_knowledge.log" ]; then
+            git add daily_knowledge.log
+          fi
+
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "📚 Daily knowledge update - $(date +'%Y-%m-%d')"
+            git push
+          fi
+
+      - name: Upload artifacts (for debugging)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-logs
+          path: |
+            daily_knowledge.log
+            email_preview.html
+          retention-days: 7

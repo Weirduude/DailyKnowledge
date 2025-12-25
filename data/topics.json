@@ -1,0 +1,788 @@
+{
+    "version": "1.0",
+    "last_updated": "2024-12-25",
+    "topics": [
+        {
+            "topic": "Backpropagation",
+            "category": "Foundations",
+            "tags": [
+                "deep-learning",
+                "optimization",
+                "neural-network"
+            ]
+        },
+        {
+            "topic": "Gradient Descent",
+            "category": "Foundations",
+            "tags": [
+                "optimization",
+                "training"
+            ]
+        },
+        {
+            "topic": "KL Divergence",
+            "category": "Foundations",
+            "tags": [
+                "information-theory",
+                "probability"
+            ]
+        },
+        {
+            "topic": "Cross Entropy Loss",
+            "category": "Foundations",
+            "tags": [
+                "loss-function",
+                "classification"
+            ]
+        },
+        {
+            "topic": "Softmax Function",
+            "category": "Foundations",
+            "tags": [
+                "activation",
+                "probability"
+            ]
+        },
+        {
+            "topic": "Positional Encoding",
+            "category": "Foundations",
+            "tags": [
+                "transformer",
+                "attention"
+            ]
+        },
+        {
+            "topic": "Batch Normalization",
+            "category": "Foundations",
+            "tags": [
+                "normalization",
+                "training"
+            ]
+        },
+        {
+            "topic": "Layer Normalization",
+            "category": "Foundations",
+            "tags": [
+                "normalization",
+                "transformer"
+            ]
+        },
+        {
+            "topic": "Dropout",
+            "category": "Foundations",
+            "tags": [
+                "regularization",
+                "training"
+            ]
+        },
+        {
+            "topic": "Attention Mechanism",
+            "category": "Foundations",
+            "tags": [
+                "transformer",
+                "nlp"
+            ]
+        },
+        {
+            "topic": "Self-Attention",
+            "category": "Foundations",
+            "tags": [
+                "transformer",
+                "attention"
+            ]
+        },
+        {
+            "topic": "Multi-Head Attention",
+            "category": "Foundations",
+            "tags": [
+                "transformer",
+                "attention"
+            ]
+        },
+        {
+            "topic": "Word Embeddings",
+            "category": "Foundations",
+            "tags": [
+                "nlp",
+                "representation"
+            ]
+        },
+        {
+            "topic": "Tokenization",
+            "category": "Foundations",
+            "tags": [
+                "nlp",
+                "preprocessing"
+            ]
+        },
+        {
+            "topic": "BPE (Byte Pair Encoding)",
+            "category": "Foundations",
+            "tags": [
+                "tokenization",
+                "nlp"
+            ]
+        },
+        {
+            "topic": "Residual Connections",
+            "category": "Foundations",
+            "tags": [
+                "architecture",
+                "deep-learning"
+            ]
+        },
+        {
+            "topic": "Vanishing Gradient Problem",
+            "category": "Foundations",
+            "tags": [
+                "optimization",
+                "training"
+            ]
+        },
+        {
+            "topic": "Adam Optimizer",
+            "category": "Foundations",
+            "tags": [
+                "optimization",
+                "training"
+            ]
+        },
+        {
+            "topic": "Learning Rate Scheduling",
+            "category": "Foundations",
+            "tags": [
+                "optimization",
+                "training"
+            ]
+        },
+        {
+            "topic": "Weight Initialization",
+            "category": "Foundations",
+            "tags": [
+                "training",
+                "neural-network"
+            ]
+        },
+        {
+            "topic": "KV Cache",
+            "category": "Engineering",
+            "tags": [
+                "inference",
+                "optimization",
+                "llm"
+            ]
+        },
+        {
+            "topic": "FlashAttention",
+            "category": "Engineering",
+            "tags": [
+                "optimization",
+                "attention",
+                "gpu"
+            ]
+        },
+        {
+            "topic": "vLLM",
+            "category": "Engineering",
+            "tags": [
+                "inference",
+                "serving",
+                "llm"
+            ]
+        },
+        {
+            "topic": "ONNX Runtime",
+            "category": "Engineering",
+            "tags": [
+                "inference",
+                "deployment",
+                "optimization"
+            ]
+        },
+        {
+            "topic": "TensorRT",
+            "category": "Engineering",
+            "tags": [
+                "inference",
+                "nvidia",
+                "optimization"
+            ]
+        },
+        {
+            "topic": "Model Quantization",
+            "category": "Engineering",
+            "tags": [
+                "compression",
+                "inference",
+                "optimization"
+            ]
+        },
+        {
+            "topic": "INT8 Quantization",
+            "category": "Engineering",
+            "tags": [
+                "quantization",
+                "inference"
+            ]
+        },
+        {
+            "topic": "Knowledge Distillation",
+            "category": "Engineering",
+            "tags": [
+                "compression",
+                "training"
+            ]
+        },
+        {
+            "topic": "Model Pruning",
+            "category": "Engineering",
+            "tags": [
+                "compression",
+                "optimization"
+            ]
+        },
+        {
+            "topic": "Speculative Decoding",
+            "category": "Engineering",
+            "tags": [
+                "inference",
+                "optimization",
+                "llm"
+            ]
+        },
+        {
+            "topic": "Continuous Batching",
+            "category": "Engineering",
+            "tags": [
+                "inference",
+                "serving",
+                "throughput"
+            ]
+        },
+        {
+            "topic": "PagedAttention",
+            "category": "Engineering",
+            "tags": [
+                "memory",
+                "attention",
+                "vllm"
+            ]
+        },
+        {
+            "topic": "Vector Database",
+            "category": "Engineering",
+            "tags": [
+                "rag",
+                "retrieval",
+                "embeddings"
+            ]
+        },
+        {
+            "topic": "FAISS",
+            "category": "Engineering",
+            "tags": [
+                "vector-search",
+                "retrieval"
+            ]
+        },
+        {
+            "topic": "Pinecone",
+            "category": "Engineering",
+            "tags": [
+                "vector-database",
+                "cloud"
+            ]
+        },
+        {
+            "topic": "GPU Memory Management",
+            "category": "Engineering",
+            "tags": [
+                "optimization",
+                "cuda",
+                "training"
+            ]
+        },
+        {
+            "topic": "Mixed Precision Training",
+            "category": "Engineering",
+            "tags": [
+                "training",
+                "optimization",
+                "fp16"
+            ]
+        },
+        {
+            "topic": "DeepSpeed",
+            "category": "Engineering",
+            "tags": [
+                "distributed",
+                "training",
+                "microsoft"
+            ]
+        },
+        {
+            "topic": "FSDP (Fully Sharded Data Parallel)",
+            "category": "Engineering",
+            "tags": [
+                "distributed",
+                "training",
+                "pytorch"
+            ]
+        },
+        {
+            "topic": "Gradient Checkpointing",
+            "category": "Engineering",
+            "tags": [
+                "memory",
+                "training",
+                "optimization"
+            ]
+        },
+        {
+            "topic": "LoRA (Low-Rank Adaptation)",
+            "category": "SOTA",
+            "tags": [
+                "fine-tuning",
+                "peft",
+                "efficiency"
+            ]
+        },
+        {
+            "topic": "QLoRA",
+            "category": "SOTA",
+            "tags": [
+                "fine-tuning",
+                "quantization",
+                "peft"
+            ]
+        },
+        {
+            "topic": "RLHF",
+            "category": "SOTA",
+            "tags": [
+                "alignment",
+                "training",
+                "llm"
+            ]
+        },
+        {
+            "topic": "DPO (Direct Preference Optimization)",
+            "category": "SOTA",
+            "tags": [
+                "alignment",
+                "training",
+                "llm"
+            ]
+        },
+        {
+            "topic": "RAG (Retrieval Augmented Generation)",
+            "category": "SOTA",
+            "tags": [
+                "retrieval",
+                "llm",
+                "knowledge"
+            ]
+        },
+        {
+            "topic": "MoE (Mixture of Experts)",
+            "category": "SOTA",
+            "tags": [
+                "architecture",
+                "scaling",
+                "efficiency"
+            ]
+        },
+        {
+            "topic": "Rotary Position Embedding (RoPE)",
+            "category": "SOTA",
+            "tags": [
+                "position-encoding",
+                "llm",
+                "attention"
+            ]
+        },
+        {
+            "topic": "Grouped Query Attention (GQA)",
+            "category": "SOTA",
+            "tags": [
+                "attention",
+                "efficiency",
+                "llm"
+            ]
+        },
+        {
+            "topic": "Sliding Window Attention",
+            "category": "SOTA",
+            "tags": [
+                "attention",
+                "long-context",
+                "efficiency"
+            ]
+        },
+        {
+            "topic": "Constitutional AI",
+            "category": "SOTA",
+            "tags": [
+                "alignment",
+                "safety",
+                "anthropic"
+            ]
+        },
+        {
+            "topic": "Instruction Tuning",
+            "category": "SOTA",
+            "tags": [
+                "fine-tuning",
+                "alignment",
+                "llm"
+            ]
+        },
+        {
+            "topic": "PEFT (Parameter Efficient Fine-Tuning)",
+            "category": "SOTA",
+            "tags": [
+                "fine-tuning",
+                "efficiency"
+            ]
+        },
+        {
+            "topic": "Prefix Tuning",
+            "category": "SOTA",
+            "tags": [
+                "fine-tuning",
+                "peft"
+            ]
+        },
+        {
+            "topic": "Adapter Layers",
+            "category": "SOTA",
+            "tags": [
+                "fine-tuning",
+                "peft",
+                "architecture"
+            ]
+        },
+        {
+            "topic": "Diffusion Models",
+            "category": "SOTA",
+            "tags": [
+                "generative",
+                "image",
+                "denoising"
+            ]
+        },
+        {
+            "topic": "Classifier-Free Guidance",
+            "category": "SOTA",
+            "tags": [
+                "diffusion",
+                "generation",
+                "control"
+            ]
+        },
+        {
+            "topic": "ControlNet",
+            "category": "SOTA",
+            "tags": [
+                "diffusion",
+                "control",
+                "image"
+            ]
+        },
+        {
+            "topic": "DiT (Diffusion Transformer)",
+            "category": "SOTA",
+            "tags": [
+                "diffusion",
+                "transformer",
+                "architecture"
+            ]
+        },
+        {
+            "topic": "Multimodal LLM",
+            "category": "SOTA",
+            "tags": [
+                "vision",
+                "language",
+                "multimodal"
+            ]
+        },
+        {
+            "topic": "Vision Transformer (ViT)",
+            "category": "SOTA",
+            "tags": [
+                "vision",
+                "transformer",
+                "architecture"
+            ]
+        },
+        {
+            "topic": "Chain-of-Thought (CoT)",
+            "category": "Reasoning",
+            "tags": [
+                "prompting",
+                "reasoning",
+                "llm"
+            ]
+        },
+        {
+            "topic": "ReAct Prompting",
+            "category": "Reasoning",
+            "tags": [
+                "agent",
+                "reasoning",
+                "action"
+            ]
+        },
+        {
+            "topic": "Tree of Thoughts",
+            "category": "Reasoning",
+            "tags": [
+                "reasoning",
+                "search",
+                "prompting"
+            ]
+        },
+        {
+            "topic": "Few-Shot Learning",
+            "category": "Reasoning",
+            "tags": [
+                "prompting",
+                "in-context-learning"
+            ]
+        },
+        {
+            "topic": "Zero-Shot Learning",
+            "category": "Reasoning",
+            "tags": [
+                "prompting",
+                "generalization"
+            ]
+        },
+        {
+            "topic": "Self-Consistency",
+            "category": "Reasoning",
+            "tags": [
+                "prompting",
+                "reasoning",
+                "sampling"
+            ]
+        },
+        {
+            "topic": "LLM Agent",
+            "category": "Reasoning",
+            "tags": [
+                "agent",
+                "autonomous",
+                "llm"
+            ]
+        },
+        {
+            "topic": "Function Calling",
+            "category": "Reasoning",
+            "tags": [
+                "agent",
+                "tool-use",
+                "llm"
+            ]
+        },
+        {
+            "topic": "Tool Use in LLMs",
+            "category": "Reasoning",
+            "tags": [
+                "agent",
+                "function-calling",
+                "capability"
+            ]
+        },
+        {
+            "topic": "Reflection in AI Agents",
+            "category": "Reasoning",
+            "tags": [
+                "agent",
+                "self-improvement",
+                "reasoning"
+            ]
+        },
+        {
+            "topic": "Planning in AI Agents",
+            "category": "Reasoning",
+            "tags": [
+                "agent",
+                "reasoning",
+                "task-decomposition"
+            ]
+        },
+        {
+            "topic": "Memory in AI Agents",
+            "category": "Reasoning",
+            "tags": [
+                "agent",
+                "long-term-memory",
+                "context"
+            ]
+        },
+        {
+            "topic": "Prompt Engineering",
+            "category": "Reasoning",
+            "tags": [
+                "prompting",
+                "optimization",
+                "llm"
+            ]
+        },
+        {
+            "topic": "System Prompts",
+            "category": "Reasoning",
+            "tags": [
+                "prompting",
+                "control",
+                "llm"
+            ]
+        },
+        {
+            "topic": "Structured Output",
+            "category": "Reasoning",
+            "tags": [
+                "llm",
+                "json",
+                "parsing"
+            ]
+        },
+        {
+            "topic": "ImageNet Moment",
+            "category": "History",
+            "tags": [
+                "milestone",
+                "vision",
+                "deep-learning"
+            ]
+        },
+        {
+            "topic": "AlphaGo Story",
+            "category": "History",
+            "tags": [
+                "reinforcement-learning",
+                "game",
+                "deepmind"
+            ]
+        },
+        {
+            "topic": "Transformer Paper (Attention Is All You Need)",
+            "category": "History",
+            "tags": [
+                "milestone",
+                "architecture",
+                "google"
+            ]
+        },
+        {
+            "topic": "GPT Evolution (1 to 4)",
+            "category": "History",
+            "tags": [
+                "openai",
+                "llm",
+                "evolution"
+            ]
+        },
+        {
+            "topic": "BERT Revolution",
+            "category": "History",
+            "tags": [
+                "nlp",
+                "pretraining",
+                "google"
+            ]
+        },
+        {
+            "topic": "GAN Origin Story",
+            "category": "History",
+            "tags": [
+                "generative",
+                "milestone",
+                "goodfellow"
+            ]
+        },
+        {
+            "topic": "ResNet Breakthrough",
+            "category": "History",
+            "tags": [
+                "vision",
+                "architecture",
+                "microsoft"
+            ]
+        },
+        {
+            "topic": "Word2Vec Impact",
+            "category": "History",
+            "tags": [
+                "embeddings",
+                "nlp",
+                "google"
+            ]
+        },
+        {
+            "topic": "ChatGPT Launch Impact",
+            "category": "History",
+            "tags": [
+                "llm",
+                "product",
+                "openai"
+            ]
+        },
+        {
+            "topic": "Stable Diffusion Open Source",
+            "category": "History",
+            "tags": [
+                "diffusion",
+                "open-source",
+                "stability-ai"
+            ]
+        },
+        {
+            "topic": "LLaMA Release & Impact",
+            "category": "History",
+            "tags": [
+                "open-source",
+                "llm",
+                "meta"
+            ]
+        },
+        {
+            "topic": "AI Winter & Revival",
+            "category": "History",
+            "tags": [
+                "history",
+                "timeline",
+                "industry"
+            ]
+        },
+        {
+            "topic": "Turing Test",
+            "category": "History",
+            "tags": [
+                "history",
+                "philosophy",
+                "benchmark"
+            ]
+        },
+        {
+            "topic": "Perceptron History",
+            "category": "History",
+            "tags": [
+                "history",
+                "neural-network",
+                "foundation"
+            ]
+        },
+        {
+            "topic": "Deep Learning Revolution (2012)",
+            "category": "History",
+            "tags": [
+                "milestone",
+                "alexnet",
+                "gpu"
+            ]
+        }
+    ]
+}

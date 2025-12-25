@@ -1,0 +1,13 @@
+# DailyKnowledge - AI知识每日推送系统
+# Python 3.9+
+
+# LLM API (OpenAI Compatible)
+openai>=1.0.0
+
+# 邮件处理
+markdown>=3.5.0
+premailer>=3.10.0
+
+# 工具库
+python-dotenv>=1.0.0
+

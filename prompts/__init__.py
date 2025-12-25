@@ -1,0 +1,17 @@
+"""Prompts module for LLM content generation."""
+
+from prompts.newsletter import NEWSLETTER_SYSTEM_PROMPT, NEWSLETTER_USER_TEMPLATE
+from prompts.examiner import EXAMINER_SYSTEM_PROMPT, EXAMINER_USER_TEMPLATE
+from prompts.topic_generator import (
+    TOPIC_GENERATOR_SYSTEM_PROMPT,
+    TOPIC_GENERATOR_USER_TEMPLATE,
+)
+
+__all__ = [
+    "NEWSLETTER_SYSTEM_PROMPT",
+    "NEWSLETTER_USER_TEMPLATE",
+    "EXAMINER_SYSTEM_PROMPT",
+    "EXAMINER_USER_TEMPLATE",
+    "TOPIC_GENERATOR_SYSTEM_PROMPT",
+    "TOPIC_GENERATOR_USER_TEMPLATE",
+]
