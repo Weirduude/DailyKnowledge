@@ -63,9 +63,9 @@ jobs:
           fi
 
           # Add log file
-          if [ -f "daily_knowledge.log" ]; then
-            git add daily_knowledge.log
-          fi
+          # if [ -f "daily_knowledge.log" ]; then
+          #   git add daily_knowledge.log
+          # fi
 
           # Check if there are changes to commit
           if git diff --staged --quiet; then
